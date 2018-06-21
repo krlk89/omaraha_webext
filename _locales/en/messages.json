@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Omaraha .tsv extension",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Adds a link in the users statistics page to download data in .tsv format",
+    "description": "Description of the extension."
+  }
+}

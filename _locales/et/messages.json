@@ -1,0 +1,10 @@
+{
+  "extensionName": {
+    "message": "Omaraha .tsv täiendus",
+    "description": "Name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Lisab kasutaja statistika lehele lingi andmete .tsv formaadis allalaadimiseks",
+    "description": "Description of the extension."
+  }
+}
