@@ -1,7 +1,7 @@
 "use strict";
 
-(function() {
-    function getInfoForTSV(table) {
+(() => {
+    function filterDataForTSV(table) {
         const data = table.innerText.split("\n");
 
         // remove rows with no data
@@ -37,27 +37,23 @@
 
     const headingsTable = document.getElementById("freeze");
     const statsTable = document.getElementById("my_stats");
-    const filteredHeadings = getInfoForTSV(headingsTable);
-    const filteredStats = getInfoForTSV(statsTable);
+    const filteredHeadings = filterDataForTSV(headingsTable);
+    const filteredStats = filterDataForTSV(statsTable);
     const language = document.querySelector("a.js-lang").firstChild.textContent.trim(); // EST, ENG or RUS
     const year = document.querySelector("ul.uk-subnav.uk-subnav-pill.uk-text-bold.stats-footer li.uk-active").textContent.trim();
     const dlLinkParentDiv = document.querySelector("div.uk-form-row.uk-margin-top.uk-text-right.uk-margin-large-right");
     const tsvContent = createTSV(filteredStats, filteredHeadings);
-    let dlLinkName = "Download .tsv"; // default
+    const dlLinkNames = {
+        EST: "Lae alla .tsv",
+        ENG: "Download .tsv",
+        RUS: "скачать .tsv"
+    };
     const dlLink = document.createElement("a");
     dlLink.setAttribute("href", encodeURI(tsvContent));
     dlLink.setAttribute("download", `OR_stats_${year}.tsv`);
+    dlLink.textContent = dlLinkNames[language];
 
-    if (language === "EST") {
-        dlLinkName = "Lae alla .tsv";
-    }
-    else if (language === "RUS") {
-        dlLinkName = "скачать .tsv";
-    }
-
-    dlLink.textContent = dlLinkName;
-
-    // prevents adding the dlLink again when reloading extension
+    // prevents adding the dlLink again when reloading the extension
     if (dlLinkParentDiv.childElementCount < 2) {
         dlLinkParentDiv.appendChild(dlLink);
     }

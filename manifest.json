@@ -2,15 +2,30 @@
   "manifest_version": 2,
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
-  "version": "0.1",
-
+  "version": "0.2",
   "content_scripts": [
     {
-      "matches": ["*://*.omaraha.ee/*/invest/stats/*"],
-      "exclude_matches": ["*://*.omaraha.ee/*/invest/stats/*total=true*"],
-      "js": ["or_tsv.js"]
+      "matches": [
+        "*://*.omaraha.ee/*/invest/stats/*"
+      ],
+      "exclude_matches": [
+        "*://*.omaraha.ee/*/invest/stats/*total=true*"
+      ],
+      "js": [
+        "or_stats.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.omaraha.ee/*/accounts/balance/*"
+      ],
+      "exclude_matches": [
+        "*://*.omaraha.ee/*/accounts/balance/"
+      ],
+      "js": [
+        "or_balance.js"
+      ]
     }
   ],
-
   "default_locale": "en"
 }
