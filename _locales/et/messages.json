@@ -4,7 +4,7 @@
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "Lisab kasutaja statistika lehele lingi andmete .tsv formaadis allalaadimiseks",
+    "message": "Lae statistika ja kontoseis .tsv failina alla",
     "description": "Description of the extension."
   }
 }

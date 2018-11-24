@@ -4,7 +4,7 @@
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "Adds a link in the users statistics page to download data in .tsv format",
+    "message": "Download statistics and account balance as a .tsv file",
     "description": "Description of the extension."
   }
 }
