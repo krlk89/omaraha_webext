@@ -125,11 +125,10 @@
     }
 
     // build tsv
-    generateDataButton.addEventListener("click", () => {
+    generateDataButton.addEventListener("click", async () => {
         generateDataButton.disabled = true;
 
-        fetchData().then(data => {
-            handleData(data);
-        });
+        const data = await fetchData();
+        handleData(data);
     });
 })();
