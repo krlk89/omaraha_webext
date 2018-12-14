@@ -4,7 +4,7 @@
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "Lae statistika ja kontoseis .tsv failina alla",
+    "message": "Lae statistika, kontoseis ja investeeringute nimekiri .tsv failina alla",
     "description": "Description of the extension."
   }
 }

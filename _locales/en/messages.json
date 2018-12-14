@@ -4,7 +4,7 @@
     "description": "Name of the extension."
   },
   "extensionDescription": {
-    "message": "Download statistics and account balance as a .tsv file",
+    "message": "Download statistics, account balance and investments list as a .tsv file",
     "description": "Description of the extension."
   }
 }
