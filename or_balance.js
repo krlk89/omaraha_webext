@@ -21,9 +21,7 @@
 
         for (let i = 1; i <= pageCount; i++) {
             progress += Math.ceil(100 / pageCount);
-            if (progress >= 100) {
-                progress = 95;
-            }
+            progress = progress >= 100 ? 95 : progress;
             generateDataButton.textContent = `${progress}%`;
             promise = fetch(`${urlData.origin}${urlData.pathname}?page=${i}&${searchStr}`);
             response = await promise;
@@ -59,21 +57,17 @@
                 // account balance row (last)
                 text += "\t\t\t\t";
             }
-            else if (index === arr.length - 1) {
-                // end of row
-                text += "\n";
-            }
             else {
                 text += "\t";
             }
 
             return text;
-        }
+        };
 
         for (let i = start; i < end; i++) {
             row = data[i].textContent.split("\n");
             row = row.filter(row => row.match(/\S/));
-            formatted_row = row.map(formatter).join("");
+            formatted_row = `${row.map(formatter).join("")}\n`;
 
             content += formatted_row;
         }
@@ -124,7 +118,7 @@
         linkAndButtonParent.appendChild(generateDataButton);
     }
 
-    // build tsv
+    // main
     generateDataButton.addEventListener("click", async () => {
         generateDataButton.disabled = true;
 
