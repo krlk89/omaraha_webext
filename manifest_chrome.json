@@ -46,10 +46,5 @@
   "permissions": [
     "storage"
   ],
-  "applications": {
-    "gecko": {
-      "id": "or_webext@or_webext.com"
-    }
-  },
   "default_locale": "en"
 }
