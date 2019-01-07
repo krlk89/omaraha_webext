@@ -48,7 +48,7 @@
   ],
   "applications": {
     "gecko": {
-      "id": "or_webext@or_webext.com"
+      "id": "{f370afad-27c2-41af-82ff-8b2d5e7d624e}"
     }
   },
   "default_locale": "en"
