@@ -14,6 +14,7 @@ async function fetchData(btn, language) {
     let promise;
     let response;
     let data;
+    let results = [];
 
     for (let i = 1; i <= pageCount; i++) {
         btn.textContent = `${i} / ${pageCount}`;
@@ -21,7 +22,7 @@ async function fetchData(btn, language) {
         try {
             promise = fetch(`${urlData.origin}${urlData.pathname}?page=${i}&${searchStr}`);
             response = await promise;
-            data = await response.text();
+            data = response.text();
         }
         catch (err) {
             console.error(err);
@@ -31,9 +32,10 @@ async function fetchData(btn, language) {
 
         await wait(2000);
     }
+    results = await Promise.all(dataArray);
     btn.textContent = generateDataButtonNames[language][1];
 
-    return dataArray;
+    return results;
 }
 
 function handleData(data, queryStr, linkName, createTSV, language, linkAndButtonParent) {

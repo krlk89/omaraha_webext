@@ -18,11 +18,11 @@
             filteredStats.splice(4, 0, "", "", "");
         }
         else {
-            filteredStats.splice(18, 0, "");
+            filteredStats.splice(19, 0, "");
         }
 
-        // max length for headings and stats array is 25
-        for (let i = 0; i < 26; i++) {
+        // max length for headings and stats array is 26
+        for (let i = 0; i < 27; i++) {
             if (filteredStats[i]) {
                 tsvContent += `${filteredHeadings[i]}\t${filteredStats[i]}\n`;
             }
