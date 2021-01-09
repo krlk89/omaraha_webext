@@ -22,7 +22,7 @@
         }
 
         // max length for headings and stats array is 26
-        for (let i = 0; i < 27; i++) {
+        for (let i = 0; i < 29; i++) {
             if (filteredStats[i]) {
                 tsvContent += `${filteredHeadings[i]}\t${filteredStats[i]}\n`;
             }

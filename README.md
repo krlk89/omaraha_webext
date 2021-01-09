@@ -1,4 +1,6 @@
-# Omaraha .tsv extension / Omaraha .tsv täiendus
+# NOT IN DEVELOPMENT ANYMORE / EI OLE ENAM ARENDUSES
+
+## Omaraha .tsv extension / Omaraha .tsv täiendus
 * Adds a link on the users statistics page to download data in .tsv format.
 * Adds a button on the account balance and investments pages which generates a link to download data in .tsv format.
 
